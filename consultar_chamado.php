@@ -4,8 +4,7 @@
 
 <?php
 $chamados = array();
-$caminho_arquivo = $_SERVER['DOCUMENT_ROOT'] . '/app_help_desk/arquivo.txt';
-$arquivo = fopen($caminho_arquivo, 'r');
+$arquivo = fopen('../../app_help_desk/arquivo.txt', 'r');
 while (!feof($arquivo)) {
   $registro = fgets($arquivo);
   $chamados[] = $registro;
