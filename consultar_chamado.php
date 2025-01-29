@@ -4,7 +4,7 @@
 
 <?php
 $chamados = array();
-$arquivo = fopen('includes/valida_login.php', 'r');
+$arquivo = fopen('database/arquivo.txt', 'r');
 while (!feof($arquivo)) {
   $registro = fgets($arquivo);
   $chamados[] = $registro;
