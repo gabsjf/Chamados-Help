@@ -32,16 +32,16 @@ foreach($usuarios_app as $user){
 }
 
 if($usuario_autenticado){
-    echo 'usuario autenticado';
     $_SESSION['autenticado'] = 'SIM';
     $_SESSION['id'] = $usuario_id;
     $_SESSION['perfil_id'] = $usuario_perfil_id;
     header('Location:home.php');
-    
+    exit();
 
 }else {
     $_SESSION['autenticado'] = 'NAO';
     header('Location:index.php?login=erro');
+ exit();
 }
 
 
